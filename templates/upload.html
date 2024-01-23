@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files to Google Drive</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://blogs.windows.com/wp-content/uploads/prod/sites/2/2021/10/Windows-11-Bloom-Screensaver-Dark-scaled.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 450px;
+            margin: 100px auto;
+            padding: 50px;
+            background-color: cornflowerblue;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            border-radius: 8px;
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .button-group input[type="submit"],
+        .button-group label,
+        .button-group a {
+            width: 100%;
+            text-align: center;
+        }
+        .dark-blue-button {
+            background-color: #00008B; /* Dark blue color */
+            color: white;
+            border: none;
+            padding: 10px 0;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        .dark-blue-button:hover {
+            background-color: #0000CD; /* Slightly lighter blue for hover effect */
+        }
+        #selectedFiles {
+            margin-top: 10px;
+        }
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Upload Files to Google Drive</h1>
+        <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data" class="text-center">
+            <div class="button-group">
+                <label for="fileInput" class="dark-blue-button">Choose Files</label>
+                <input type="file" id="fileInput" name="files" multiple style="display: none;" onchange="updateFileName(this)">
+                <input type="submit" value="Upload" class="dark-blue-button">
+            </div>
+        </form>
+        <div id="selectedFiles" class="text-center"></div>
+        <div id="error" class="text-center"></div>
+
+        {% if upload_success %}
+            <div class="text-center mt-4">
+                <a href="{{ url_for('show_table') }}" class="dark-blue-button">Show Table</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <script>
+        var validFiles = [];
+
+        function updateFileName(input) {
+            var selectedFilesDiv = document.getElementById("selectedFiles");
+            var errorDiv = document.getElementById("error");
+            errorDiv.innerText = "";
+            validFiles = []; // Clear previous selections
+
+            for (var i = 0; i < input.files.length; i++) {
+                var fileName = input.files[i].name;
+                var validExtensions = ["docx"]; // Add more valid extensions as needed
+                var isValidExtension = validExtensions.some(ext => fileName.endsWith(ext));
+
+                if (!isValidExtension) {
+                    errorDiv.innerText += "Invalid file extension for " + fileName + ".\n";
+                } else {
+                    validFiles.push(fileName);
+                }
+            }
+            displaySelectedFiles();
+        }
+
+        function displaySelectedFiles() {
+            var selectedFilesDiv = document.getElementById("selectedFiles");
+            selectedFilesDiv.innerHTML = "";
+
+            validFiles.forEach(function(fileName) {
+                var paragraph = document.createElement("p");
+                paragraph.innerHTML = 'Selected File: ' + fileName;
+                selectedFilesDiv.appendChild(paragraph);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Folder Upload</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://blogs.windows.com/wp-content/uploads/prod/sites/2/2021/10/Windows-11-Bloom-Screensaver-Dark-scaled.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: cornflowerblue; /* Set the background color for the container */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto; /* Center the logo horizontally */
+            display: block; /* Ensure the image is treated as a block element */
+            margin-bottom: 20px;
+        }
+
+        .btn-google {
+            background-color: #001F3F;
+            color: white;
+        }
+
+        .btn-google:hover {
+            background-color: #2D549C;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Use a Google Drive logo from the web -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1024px-Google_Drive_icon_%282020%29.svg.png" alt="Google Drive Logo" class="logo">
+        <h1 class="text-center mb-4">Google Drive Folder Upload</h1>
+        <div class="text-center">
+            {% if 'user_token' in session %}
+                <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+                <a href="{{ url_for('upload') }}" class="btn btn-primary">Upload File</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-google">Login with Google</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

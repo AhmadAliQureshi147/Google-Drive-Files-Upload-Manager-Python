@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "groovy-autumn-407402",
+  "private_key_id": "87bbc2707e3362c19456b8370d9099d43cc2f362",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAZwMbHQHqnDD1\nIaTdlE39IX7HntQS+mVrYy73VxtMSHfGrGJS0K82zNLoBgMmhsv0jcTpk7lWxYJd\nE2ei4+9It9KzNy+VpmGj52BswZ1QmUodwhLw3H9Kq6dCjM3UT9KxIO5CRjGvxlv2\nWbYobugZ3buc2ZiGwbaN2ld/EHADXktDK2p9rhoH6Ss/k3f82FZ5fPpkcCz+nYX1\nICZe2V/s8HhCdVP4BJqS9UbWduohQ3oz6VfGLPCr5cwuC3KvP7hDIIsxSHDTgL3J\ngDJbRzJ6uO0BPWnGT7gKENJvgtRt4kSKm9NgX53uIiaZDH+ASI8YyTb61EafsY8o\nAtyvGkrrAgMBAAECggEACYVPbwkJbj2aYpbunJRZI5yDtIcUgXfoit7WlSC3VhgD\n7U3cc7Kl6PVLvnWFtGNZNlnJk7Feq3+MiuSJ7VKQJa4K/BlP/nzEOiMZ72fJTBK5\nyy0uWMLgfaZu2Wk0SjxE9cTmZVsp3EPZiyA3Vlrem2EQhptx48E0MmLKj5wVnuT2\ndsHhm838PHpOjqiWK9TbnvC2NbLDrJiJTryxyXDINGHQtpdgVO+RlsU7uJ9IozIv\nE00XXFGj0A0KkEwjmPCQ+UXyReZrzc/HYA9aCmaGeWhu6syUoi4ZDfIHRfXDxJlo\njY22+A0aTsouSeQrqCvWhGerRJCRfYf/iJ/ms3jZGQKBgQD9J/ARD6YH5h2OUuZG\njOa543LlGf/9/dzKxTQC/zWwMgiBh4Wk82RUdhOpVlR22VZLftl0wxsLuwXNTrfy\nrXYqWcrHdGgI7wzD19opZSVTQaTCqct7fe5mPJMea011u+Xb/KiL0pnSc+xVEYOR\nnynJqLtfAKvtHVYwBQpp9MXbrQKBgQDCkFm2SYPD8hK8B4EokCYSEEo/ukwUNs9D\nfmNLiwLWFOUxggOVGfKQ66MirrVV9OWBAKw2k4dYdBVjknZ6eZqr15R6alSMgHhN\nodzPl5jsGGe8hMu6wRl3X9Z+GhJXpBQoONUpk0rv4HoYQNkWlcXpBSfXK1mGQokS\nhDB4JSuT9wKBgC2H4FKBOQBUr94oJMhtkRW/xatU2MjKvsotW6RqWDKfXQ5G3I+F\nQvc54WFkaH6TqkSbxOqOKLAca/e3/7eC4SzOx3zF/+wTan1SticZzPPDa6mjNji4\ntobmwCMJc34IVFgTghDbyNSkCs5l/v7S3IYrdb+pdEKKMzUhwvS5lFhlAoGAVGGU\ndullOysWkvPSQUxbJoRoH0Fl03J963C6Eb5FSaGgURtpAFZTjCSWCOmqfZALpSos\nhjLvhR47VIbl2XI58YM6wuiwqIrjIhAsGuBNkz92Zh1V2jX7HHm1JdWa1OW1VEhp\nsnFOE8DQUwp03EWyor/4qmoDlqXumtg3yTOdtbsCgYEAs9WzxjUnipoR/UJW3qL7\n3+nNvyws2Yhryvk0try+8WLaNl1+JLdQFK6hFPJ6x0XyevSKMBNKaPpHbjuyqQCZ\n+KuWOIl72FjNrFzDWmZsFelG3L0unsqP0w1BvWaH3f4+DHUXSC610zX/0hfVEAm7\nXhFIy6Q88cqpE1RVFxG/H0s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "test-google-drive@groovy-autumn-407402.iam.gserviceaccount.com",
+  "client_id": "104123966865923015143",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-google-drive%40groovy-autumn-407402.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uploaded Files Table</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* Increase the width to 80% or more as per your requirement */
+            width: 80%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            text-align: left;
+            /* You can also increase the font size if needed */
+            font-size: 16px;
+        }
+
+        th, td {
+            /* Increase padding for more space inside cells */
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            /* Increase the font size for headers if desired */
+            font-size: 18px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        /* This centers the table on the page */
+        .table-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <div>
+            <h1>Uploaded Files</h1>
+            <table>
+                <tr>
+                    <th>File Name</th>
+                    <th>Exists</th>
+                </tr>
+                {% for row in table_data %}
+                <tr>
+                    <td>{{ row['File Name'] }}</td>
+                    <td>{{ row['Exists'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

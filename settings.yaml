@@ -1,0 +1,7 @@
+client_config_backend: settings
+client_config:
+  client_id: '911439240128-tgorgibsi9vppvbauhgg2r07vnu8ros0.apps.googleusercontent.com'
+  client_secret: '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'
+save_credentials: True
+save_credentials_backend: file
+save_credentials_file: client_secret_911439240128-tgorgibsi9vppvbauhgg2r07vnu8ros0.apps.googleusercontent.com.json
